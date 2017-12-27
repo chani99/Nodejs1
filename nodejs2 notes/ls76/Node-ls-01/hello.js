@@ -10,8 +10,8 @@ http.createServer(function(req, res) {
 
     // the Query string
     var queryString = url.parse(req.url).query;
-    if(queryString)
-        var num = queryString.split('=')[1];
+	if (queryString)
+		var num = queryString.split('=')[1];
     
     callbackModule.evenDouble(num, function(error, newNum, time) {
         if (error) {
